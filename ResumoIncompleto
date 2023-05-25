@@ -1,4 +1,4 @@
-1. A Tela Principal do VisuAlg 
+A Tela Principal do VisuAlg 
 A tela do programa é formata por uma barra de tarefas , editor de textos , quadro  de variáveis,  simulador de saída e da barra  de status. Quando o programa é carregado, já apresenta no editor um "esqueleto" de pseudocódigo, com a intenção de  poupar trabalho ao usuário e de mostrar o formato básico que deve ser seguido  
 
 A Barra de Tarefas 
@@ -21,7 +21,7 @@ Mostrar variáveis modificadas: Ativa ou desativa a exibição da variável que 
 
 Executar (F9): Inicia (ou continua) a execução automática do pseudocódigo.  
 
- Executar com timer (Shift-F9):: Insere um atraso (que pode ser especificado no intervalo ao lado)  antes da execução de cada linha. Também realça em fundo azul o comando que está sendo  executado, da mesma forma que na  execução passo a passo.  
+ Executar com timer (Shift-F9): Insere um atraso (que pode ser especificado no intervalo ao lado)  antes da execução de cada linha. Também realça em fundo azul o comando que está sendo  executado, da mesma forma que na  execução passo a passo.  
 Intervalo do timer: Atraso em cada linha, para quando se deseja executar o pseudocódigo com timer. 
 Passo (F8): Inicia (ou continua) a execução linha por linha do pseudocódigo, dando ao usuário a oportunidade de  acompanhar o fluxo de execução, os valores das variáveis e a pilha de ativação dos subprogramas.  
 Parar (Ctrl-F2): Termina imediatamente a execução do pseudocódigo. Evidentemente, este botão fica desabilitado  quando o pseudocódigo não está sendo executado.  
@@ -35,10 +35,158 @@ Mostrar pilha de ativação (Ctrl-F3): Exibe a pilha de subprogramas ativados nu
 Ajuda (F1): Possibilita acesso às páginas de ajuda e às informações sobre o Visual g. 
 
 Quadro de Variáveis 
-Formado por uma grade na qual são mostrados o escopo de cada variável, seus nomes, seu tipo ("I" inteiro, "R" real, "C" caractere e "L" lógico) e o seu valor  
-corrente. A versão atual do VisuAlg permite a visualização de até 500 variáveis (contando individualmente cada  elemento dos vetores). 
+Formado por uma grade na qual são mostrados o escopo de cada variável, seus nomes, seu tipo ("I" inteiro, "R" real, "C" caractere e "L" lógico) e o seu valor  corrente. A versão atual do VisuAlg permite a visualização de até 500 variáveis (contando individualmente cada  elemento dos vetores). 
 
 A Barra de Status 
 Situada na parte inferior da tela, esta barra contém dois painéis: o primeiro mostra a linha e a coluna onde o cursor  está, e o segundo mostra a palavra Modificado no caso em que o pseudocódigo tenha sido alterado desde que foi  carregado ou salvo pela última vez. Nesta barra, há ainda um terceiro painel disponível, que ainda não tem um uso  específico na atual versão.  
 
+2. Menu do VisuAlg
+
+Este menu compõe-se de 7 partes:
+Arquivo: Possui os comandos para se abrir, salvar e imprimir algoritmos:
+
+Novo: Cria um novo "esqueleto" de pseudocódigo, substituindo o texto existente no editor. 
+Enviar por email: Permite o envio por email do texto presente no editor.
+Imprimir: Permite a impressão do algoritmo corrente, mostrando antes a janela de configuração de impressão.
+
+Sair: Abandona o VisuAlg.
+
+Editar: Além dos conhecidos comandos de um editor de texto.
+Corrigir indentação: Corrige automaticamente a indentação do pseudocódigo, tabulando cada comando interno comespaços à esquerda.
+
+Gravar bloco de texto: Permite a gravação em arquivo de um texto selecionado no editor. 
+
+Inserir bloco de texto: Permite a inserção do conteúdo de um arquivo. 
+
+Exibir: Possui os comandos para ativar/desativar as seguintes características:
+Número de linhas: Ativa/desativa a exibição da numeração das linhas na área à esquerda do editor.
+Variáveis modificadas: Ativa/desativa a exibição da variável que está sendo modificada. Como o número de variáveis pode ser grande, muitas podem estar fora da janela de visualização; quando esta característica está ativada, o VisuAlg rola a grade de exibição de modo que cada variável fique visível no momento em está sendo modificada. Este recurso é especialmente útil quando se executa um pseudocódigo passo a passo. Por questões de desempenho, a configuração padrão desta característica é desativada, quando o pseudocódigo está sendo executado automaticamente. No entanto, basta clicar este botão para executá-lo automaticamente com a exibição ativada. No final da execução, a configuração volta a ser desativada.
+Pseudocódigo: Contém os comandos relativos à execução do algoritmo:
+Executar: Inicia (ou continua) a execução automática do pseudocódigo.
+Passo a passo: Inicia (ou continua) a execução linha por linha do pseudocódigo, dando ao usuário a oportunidade de acompanhar o fluxo de execução, os valores das variáveis e a pilha de ativação dos subprogramas.
+Executar com timer: Insere um atraso (que pode ser especificado) antes da execução de cada linha. Também realça em fundo azul o comando que está sendo executado, da mesma forma que na execução passo a passo.
+Parar: Termina imediatamente a execução do pseudocódigo. Evidentemente, este item fica desabilitado quando o pseudocódigo não está sendo executado.
+Liga/desliga breakpoint: Insere/remove um ponto de parada na linha em que esteja o cursor. Estes pontos de parada são úteis para a depuração e acompanhamento da execução dos pseudocódigos, pois permitem a verificação dos valores das variáveis e da pilha de ativação de subprogramas.
+Desmarcar todos os breakpoints: Desativa todos os breakpoints que estejam ativados naquele momento.
+Executar em modo DOS: Com esta opção ativada, tanto a entrada como a saída-padrão passa a ser uma janela que imita o DOS, simulando a execução de um programa neste ambiente.
+Gerar valores aleatórios: Ativa a geração de valores aleatórios que substituem a digitação de dados. A faixa padrão de valores gerados é de 0 a 100 inclusive, mas pode ser modificada. Para a geração de dados do tipo caractere, não há uma faixa pré-estabelecida: os dados gerados serão sempre strings de 5 letras maiúsculas.
+Perfil: Após a execução de um pseudocódigo, exibe o número de vezes que cada umas das suas linhas foi executada.
+É útil para a análise de eficiência (por exemplo, nos métodos de ordenação).
+Pilha de ativação: Exibe a pilha de subprogramas ativados num dado momento. Convém utilizar este comando em conjunto com breakpoints ou com a execução passo a passo.
+Linguagens: Permite a tradução automático do pseudocódigo presente no editor para outras linguagens de programação. Atualmente, apenas a tradução para Pascal está implementada, mas ainda em fase de testes.
+Ferramentas: Neste menu, é possível configurar algumas opções do VisuAlg: cores e tipos de letras na exibição do pseudocódigo, número de espaços para indentação automática, etc.
+Ajuda: Entre outras coisas, possibilita acesso às páginas de ajuda e às informações sobre o VisuAlg.
+
+
+
+      3. A Linguagem de Programação do VisuAlg
+
+
+A linguagem do VisuAlg permite apenas um comando por linha, eliminando a necessidade de separadores de estruturas como o ponto e vírgula em Pascal. Além disso, não possui blocos de comandos ou comandos de desvio incondicional como o "goto". Na versão atual do VisuAlg, não existem subprogramas embutidos, exceto pelas rotinas de entrada e saída.
+
+
+Formato Básico do Pseudocódigo e Inclusão de Comentários
+O texto descreve o formato básico do pseudocódigo usado no VisuAlg. O pseudocódigo começa com a palavra-chave "algoritmo" seguida pelo nome do algoritmo entre aspas duplas. Essa nome será usado como título nas janelas de leitura de dados.
+Em seguida, há uma seção de declaração de variáveis, que termina com a palavra-chave "inicio". A partir desse ponto, inicia-se a seção de comandos, que continua até encontrar a palavra-chave "fimalgoritmo". Essa última linha marca o final do pseudocódigo e tudo o que vem depois dela é ignorado pelo interpretador.
+O VisuAlg também permite a inclusão de comentários. Qualquer texto precedido por "//" é ignorado pelo interpretador, até o final da linha. Comentários mais longos, que ocupem várias linhas, devem começar cada linha com "//".
+
+
+Tipos de Dados
+O VisuAlg prevê quatro tipos de dados: inteiro, real, cadeia de caracteres e lógico . (nenhuma com acentuação):
+• inteiro: define variáveis numéricas do tipo inteiro, ou seja, sem casas decimais.
+• real: define variáveis numéricas do tipo real, ou seja, com casas decimais.
+• caractere: define variáveis do tipo string, ou seja, cadeia de caracteres.
+• logico: define variáveis do tipo booleano, ou seja, com valor VERDADEIRO ou FALSO.
+
+
+
+
+Nomes de Variáveis e sua Declaração.
+
+Os nomes das variáveis devem começar por uma letra e depois conter letras, números ou underline, até um limite de 30 caracteres. As variáveis podem ser simples ou estruturadas (na versão atual, os vetores podem ser de uma ou duas dimensões). Não pode haver duas variáveis com o mesmo nome, com a natural exceção dos elementos de um mesmo vetor.
+
+
+
+Constantes e Comando de Atribuição
+O VisuAlg tem três tipos de constantes:
+
+• Numéricos: são valores numéricos escritos na forma usual das linguagens de programação. Podem ser inteiros ou reais. Neste último caso, o separador de decimais é o ponto e não a vírgula, independente da configuração regional do computador onde o VisuAlg está sendo executado. O VisuAlg também não suporta separadores de milhares.
+• Caracteres: qualquer cadeia de caracteres delimitada por aspas duplas (").
+• Lógicos: admite os valores VERDADEIRO ou FALSO.
+
+A atribuição de valores a variáveis é feita com o operador <-. Do seu lado esquerdo fica a variável à qual está sendo atribuído o valor, e à sua direita pode-se colocar qualquer expressão (constantes, variáveis, expressões numéricas)
+
+
+Comandos de Saída de Dados
+
+Escreve no dispositivo de saída padrão o conteúdo de cada uma das expressões que compõem lista de expressões. As expressões dentro desta lista devem estar separadas por vírgulas; depois de serem avaliadas , seus resultados são impressos na ordem indicada. É equivalente ao comando write do Pascal.
+De modo semelhante a Pascal, é possível especificar o número de espaços no qual se deseja escrever um determinado valor. 
+Para variáveis reais, pode-se também especificar o número de casas fracionárias que serão exibidas. 
+
+Comando de Entrada de Dados.
+
+Recebe valores digitados pelos usuário, atribuindo-os às variáveis cujos nomes estão.
+
+
+
+
+
+
+Comando de Desvio Condicional
+
+Ao encontrar este comando. Se o seu resultado for VERDADEIRO, todos os comandos da sequencia de comandos (são executados. Se o resultado for FALSO, estes comandos são desprezados e a execução do algoritmo continua a partir da primeira linha depois do
+fimse.
+
+
+Comandos de Repetição
+
+O VisuAlg implementa as três estruturas de repetição usuais nas linguagens de programação: o laço contado “para...ate...faca, e os laços condicionados enquanto...faca,
+e " repita...ate”.
+
+
+Comando Interrompa
+
+As três estruturas de repetição acima permitem o uso do comando interrompa, que causa uma saída imediata do laço. Embora esta técnica esteja de certa forma em desacordo com os princípios da programação estruturada, o comando interrompa foi incluído no VisuAlg por ser encontrado na literatura de introdução à programação e mesmo
+em linguagens como o Object Pascal, Clipper, VB, etc.
+
+
+Procedimentos
+
+Em VisuAlg, procedimento é um subprograma que não retorna nenhum valor. Sua declaração , que deve estar entre o final da declaração de variáveis e a linha inicio do programa principal.
+
+Funções
+
+Em VisuAlg, função é um subprograma que retorna um valor. De modo análogo aos procedimentos, sua declaração deve estar entre o final da declaração de variáveis e a linha inicio do programa Principal.
+
+
+Passagem de Parâmetros por Referência
+
+Há ainda uma outra forma de passagem de parâmetros para subprogramas: é a passagem por referência. Neste caso, o subprograma não recebe apenas um valor, mas sim o endereço de uma variável global. Portanto, qualquer modificação que for realizada no conteúdo deste parâmetro afetará também a variável global que está associada a ele.
+Durante a execução do subprograma, os parâmetros passados por referência são análogos às variáveis globais. No VisuAlg, de forma análoga a Pascal, essa passagem é feita através da palavra var na declaração do parâmetro.
+Comando Aleatório
+
+Muitas vezes a digitação de dados para o teste de um programa torna-se uma tarefa entediante. Com o uso do comando aleatorio do VisuAlg, sempre que um comando leia for encontrado, a digitação de valores numéricos e/ou caracteres é substituída por uma geração aleatória. Este comando não afeta a leitura de variáveis lógicas: com certeza, uma coisa pouco usual em programação...
+
+
+Comando Timer
+
+Embora o VisuAlg seja um interpretador de pseudocódigo, seu desempenho é muito bom: o tempo gasto para interpretar cada linha digitada é apenas uma fração de segundo. Entretanto, por motivos educacionais, pode ser conveniente exibir o fluxo de execução do pseudocódigo comando por comando, em "câmera lenta". O comando timer serve para este propósito: insere um atraso (que pode ser especificado) antes da execução de cada linha. Além disso, realça em fundo azul o comando que está sendo executado, da mesma forma que na execução passo a passo.
+
+
+Comandos de Depuração
+
+Nenhum ambiente de desenvolvimento está completo se não houver a possibilidade de se inserir pontos de interrupção (breakpoints) no pseudocódigo para fins de depuração. VisuAlg implementa dois comandos que auxiliam a depuração
+ou análise de um pseudocódigo: o comando pausa e o comando debug.
+
+
+
+Comando Eco
+Sua sintaxe é:
+eco on | off
+Este comando ativa (eco on) ou desativa (eco off) a impressão dos dados de entrada na saída-padrão do VisuAlg, ou seja, na área à direita da parte inferior da tela. Esta característica pode ser útil quando houver uma grande quantidade de dados de entrada, e se deseja apenas analisar a saída produzida. Convém utilizá-la também quando os dados de entrada provêm de um arquivo já conhecido.
+
+Comando Cronômetro
+Sua sintaxe é:
+cronometro on | off
+Este comando ativa (cronometro on) ou desativa (cronometro off) o cronômetro interno do VisuAlg. Quando o comando cronometro on é encontrado, o VisuAlg imprime na saída-padrão a informação "Cronômetro iniciado.", e começa a contar o tempo em milissegundos. Quando o comando cronometro off é encontrado, o VisuAlg imprime na saída-padrão a informação "Cronômetro terminado. Tempo decorrido: xx segundo(s) e xx ms". Este comando é útil na análise de desempenho de algoritmos (ordenação, busca, etc.).
 
