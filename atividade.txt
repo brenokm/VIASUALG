@@ -1,0 +1,142 @@
+atividade 1
+Algoritmo "1"
+
+Var
+i,soma:inteiro
+
+
+Inicio
+soma<-0
+para i de 1 até 100 faca
+soma<-soma+i
+fimpara
+escreva("o resultado da suma dos números é ",soma )
+Fimalgoritmo
+
+atividade 2
+Algoritmo "2"
+
+Var
+      mt,i,mult:INTEIRO
+
+
+Inicio
+
+escreva("Isira o número à ser multiplicado:")
+leia(mt)
+
+para i de 1 até mt faça
+
+mult<-mt*i
+
+escreval(mt," x",i,"=",mult)
+fimpara
+
+Fimalgoritmo
+
+
+Var
+A, B, i :inteiro
+cubo, soma : real
+Inicio
+soma <- 0
+escreva("Insira o 1º número: ")
+leia(A)
+escreva("Insira o 2º número: ")
+leia(B)
+se A > B entao
+enquanto A > B faca
+escreva("O 2º número deve ser maior que o primeiro. Insira novamente: ")
+leia(B)
+FimEnquanto
+FimSe
+Para i de A+1 ate B-1 faca
+se i % 2 = 0 entao
+cubo <- i^3
+soma <- soma + cubo
+FimSe
+FimPara
+LimpaTela
+escreva("A soma dos cubos dos pares entre ",A," e ",B," é ",soma)
+Fimalgoritmo
+
+
+atividade 3
+Algoritmo "3"
+
+Var
+F,C: real
+Inicio
+escreva("Insira a temperatura em Fahrenheit: ")
+leia(F)
+ C <- (5 * (F-32) / 9)
+escreva("a temperatura em Celcius é: ",C)
+Fimalgoritmo
+
+
+atividade 4
+Algoritmo "4"
+
+Var
+i, el, a, b, c, vot: inteiro
+Inicio
+escreva("Informe a quantidade de pessoas que vão votar: ")
+leia(el)
+LimpaTela
+escreval("TABELA DE CANDIDATOS")
+escreval("1- Candidato A")
+escreval("2- Candidato B")
+escreval("3- Candidato C")
+para i de 1 ate eleitor faca
+escreva("Eleitor ", i, ", insira o número correspondente")
+escreva(" ao candidato desejado: ")
+leia(voto)
+se vot = 1 entao
+a <- a + 1
+senao
+se vot = 2 entao
+b <- b + 1
+senao
+c <- c + 1
+FimSe
+FimSe
+FimPara
+LimpaTela
+escreval("O candidato A recebeu ",a," votos.")
+escreval("O candidato B recebeu ",b," votos.")
+escreval("O candidato C recebeu ",c," votos.")
+Fimalgoritmo
+
+
+atividade 5
+
+
+
+atividade 6
+Algoritmo "semnome"
+
+Var
+      RA,RB,RC:INTEIRO
+
+
+Inicio
+escreva("indique a medida da reta A:")
+LEIA(RA)
+escreva("indique a medida da reta B:")
+LEIA(RB)
+escreva("indique a medida da reta C:")
+LEIA(RC)
+
+se (RA=RB) e (RA=RC) entao
+escreva("seu triangulo é EQUILÁTERO")
+
+senao
+se (RA=RB) ou (RA=RC) ou (RC=RB)  entao
+escreva("seu triangulo é ISÓCELES")
+
+senao
+escreva("seu triangulo é ESCALENO")
+FIMSE
+fimse
+
+Fimalgoritmo
